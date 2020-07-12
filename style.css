@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(253, 248, 242);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.case {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  width: 250px;
+  height: 600px;
+  background-color: rgb(241, 241, 241);
+  border-radius: 15px;
+  border: solid 5px #f3f3f3;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2), -2px -0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  grid-template-columns: 5fr 1fr 5fr;
+  grid-template-rows: repeat(4, 1fr);
+  padding: 10px;
+}
+
+.paint {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.7) 1px 1px 10px;
+}
+
+.one {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background-color: red;
+  border: solid 5px rgb(145, 1, 1);
+}
+
+.two {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  background-color: blue;
+  border: solid 5px rgb(1, 1, 160);
+}
+
+.three {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  background-color: yellow;
+  border: solid 5px rgb(197, 197, 0);
+}
+
+.four {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  background-color: green;
+  border: solid 5px rgb(0, 94, 0);
+}
+
+.five {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  background-color: orange;
+  border: solid 5px rgb(206, 134, 0);
+}
+
+.six {
+  grid-column: 3/4;
+  grid-row: 3/4;
+  background-color: purple;
+  border: solid 5px rgb(94, 0, 94);
+}
+
+.seven {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  background-color: rgb(29, 29, 29);
+  border: solid 5px black;
+}
+
+.eight {
+  grid-column: 3/4;
+  grid-row: 4/5;
+  background-color: white;
+  border: solid 5px rgb(211, 211, 211);
+}
+
+.brush {
+  grid-column: 2/3;
+  grid-row: 1/5;
+  width: 10px;
+  height: 500px;
+  background-color: brown;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+.brush::before {
+  display: block;
+  position: relative;
+  top: -20px;
+  right: 5px;
+  content: "";
+  width: 20px;
+  height: 60px;
+  border-radius: 80%;
+  background-color: black;
+}
+
+.brush::after {
+  display: block;
+  position: relative;
+  top: -25px;
+  right: 0px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-image: linear-gradient(
+    90deg,
+    rgb(131, 131, 131),
+    white,
+    rgb(119, 119, 119)
+  );
+}
